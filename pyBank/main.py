@@ -1,19 +1,19 @@
 #this is my amazing code for my homework for pyBank section
 
-# import os
-# outputPath = os.path.join('budget_data.csv')
+import os
+outputPath = os.path.join('pythonChallenge','pyBank','Resources','budget_data.csv')
 
 import sys
 stdoutOrigin=sys.stdout 
 sys.stdout = open("log.txt", "w")
 
 import csv
-with open ('budget_data.csv') as csvfile:
+with open (outputPath) as csvfile:
      csvreader = csv.reader(csvfile, delimiter = ',')
      print('Financial Analysis')
      print('----------------------')
      change=[]
-     change2=[]
+     change2=[]     
      date=[]
 
      next(csvreader)
